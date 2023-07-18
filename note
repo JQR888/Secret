@@ -1,0 +1,3 @@
+scp * qj15@vcm-34549.vm.duke.edu:~/webapp
+
+ssh qj15@vcm-34549.vm.duke.edu
