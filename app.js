@@ -202,9 +202,16 @@ app.post("/login", function(req, res) {
   
   
   app.get("/logout", function(req, res) {
-    req.logout(); // Remove the callback function
-    res.redirect("/");
-});
+    req.logout(function(err) {
+      if (err) {
+        // Handle error
+        console.error(err);
+      }
+      // Additional logic or redirection after logout
+      res.redirect("/");
+    });
+  });
+  
 
 
 
